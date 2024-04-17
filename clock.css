@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white; 
+    font-family: "Cairo Play", sans-serif;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0039b6bf;
+
+}
+.container{
+    position: relative;
+}
+.clock{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(31, 26, 73);
+    border-radius: 50%;
+    box-shadow: 0px 0px 71px rgb(225, 222, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 32px;
+}
+.clock::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+.hand{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 5px;
+    height: var(--h);
+    border-radius: 17px;
+}
